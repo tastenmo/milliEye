@@ -1,4 +1,4 @@
-import serial
+import serial as ser
 import sys
 import os
 import time
@@ -6,7 +6,7 @@ import numpy as np
 import pickle
 import cv2
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
+#from mpl_toolkits.mplot3d import Axes3D
 
 """
 This program only is tested for Radar IWR6843
@@ -19,8 +19,9 @@ def serialConfig(configFileName):
 
     # Open the serial ports for the configuration and the data ports
     # Linux
-    CLIport = serial.Serial('/dev/ttyACM0', 115200)
-    Dataport = serial.Serial('/dev/ttyACM1', 921600)
+    CLIport = ser.Serial('/dev/ttyUSB0', 115200)
+    Dataport = ser.Serial('/dev/ttyUSB1', 921600)
+    #Dataport = ser.Serial('/dev/ttyUSB1', 115200)
 
     # Windows
     # CLIport = serial.Serial('COM9', 115200)

@@ -68,7 +68,7 @@ def load_calib(filename: str) -> np.array:
     """
     trans_x, trans_y, trans_z = [-0.07, -0.05, 0]  
     with open(filename, "r") as f:
-        y = yaml.load(f)
+        y = yaml.load(f, Loader=yaml.SafeLoader)
         camera_matrix = np.resize(y["camera_matrix"]["data"], (3, 3))
         distortion = np.array(y["distortion_coefficients"]["data"])
         calib_param = np.array([camera_matrix[0, 0], camera_matrix[0, 2], \

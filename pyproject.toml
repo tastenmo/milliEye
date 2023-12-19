@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "millieye"
+version = "0.1.0"
+description = ""
+authors = ["Martin Heubuch"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+scipy = "^1.11.4"
+scikit-learn = "^1.3.2"
+opencv-python-headless = "^4.8.1.78"
+torch = "^2.1.2"
+torchvision = "^0.16.2"
+filterpy = "^1.4.5"
+pyserial = "^3.5"
+
+
+[tool.poetry.group.dev.dependencies]
+jupyter = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

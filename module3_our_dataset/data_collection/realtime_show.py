@@ -8,7 +8,7 @@ import time
 import os
 import multiprocessing as mp
 from collections import deque
-from show import *
+#from show import *
 from utils.ReadRadar import *
 from utils.tracking import *
 from utils.utils import *
